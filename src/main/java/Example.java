@@ -39,7 +39,7 @@ public class Example {
         Transaction signedTx = tx.sign(Numeric.toBigInt(EXAMPLE_PRIVATE_KEY));
 
         // Send tx to CKB blockchain and print the tx hash
-        String NODE_URL = "https://testnet.ckb.dev/rpc";
+        String NODE_URL = "http://localhost:8114";
         Api api = new Api(NODE_URL, false);
         String hash = api.sendTransaction(signedTx);
         System.out.println(hash);
